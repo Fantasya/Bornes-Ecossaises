@@ -11,3 +11,4 @@ amélioration possibles :
   - 1 Tri pour tous les cas
   - placer les brelans en fonction de ce que fait l'adversaire
   
+Je suis vraiement curieux de voir comment faire pour n'avoir qu'un seul tri.. j'ai essayer 40 min mais j'ai abandonné ^^
