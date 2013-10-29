@@ -2,6 +2,7 @@
 #include <cmath>
 #include "Def.h"
 
+
 // IA RANDOM
 t_choix_IA IA_rand(t_BORNES bornes, int num_player, t_tableau_hand hands)
 {
