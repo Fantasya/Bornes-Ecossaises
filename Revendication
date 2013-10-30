@@ -16,9 +16,14 @@ bool reperage_revendication (t_BORNES bornes, int num_borne_choisie, int num_pla
 // comparaison des cartes d'une borne pleine.
 int comparaison (t_borne borne_revendiquee, int num_player)
 {
-    t_tableau_cartes cartes_player_1 = borne_revendiquee.zones_borne [0].tableau_cartes;
+    t_tableau_cartes cartes_player_1 = borne_revendiquee.zones_borne [0].tableau_cartes; 
     t_tableau_cartes cartes_player_2 = borne_revendiquee.zones_borne [1].tableau_cartes;
+    /* Ces deux lignes de codes ne passaient pas chez moi (problème d'initialisation de tableau), et chez vous? 
+    J'ai quand même réussi à les modifier et maintenant le jeu tourne niquel ;) */
+    
+    
     // que 2 cas.... pas besoin de créer un tableau pour s'épargner une ligne.
+
 
     tri (cartes_player_1); tri (cartes_player_2);
 
