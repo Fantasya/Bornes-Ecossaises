@@ -57,7 +57,8 @@ int distribution_pioche_debut (t_pioche pioche, t_tableau_hand hands, int cartes
 // distribution d'une carte pour remplacer la carte jouée par le joueur
 void recevoir_carte (t_pioche pioche, t_tableau_hand hands, int num_player, int cartes_piochees_debut)
 {
-    int i=-1;
+    int i=0;
+    // repérage de la première carte vide.
     while (hands[num_player][i].num_carte != 0) i++;
     hands[num_player][i] = distribution_pioche(pioche, cartes_piochees_debut);
 }
