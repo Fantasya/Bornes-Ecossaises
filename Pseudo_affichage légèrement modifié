@@ -1,0 +1,92 @@
+/* C'est Jordan qui vous parle (comme j'utilise le compte de Vianney je précise)^^ 
+J'ai modifié son code pour afficher le jeu de tel sorte que le joueur qui joue ne voie plus les cartes de l'adversaire.
+C'était très simple ne vous inquiétez pas ^^ (en 5 min puisque le code de Vianney le permettait) */
+
+
+#include <iostream>
+#include "Def.h"
+using namespace std;
+
+
+
+void affichage (t_tableau_hand hands, t_BORNES bornes, int num_player)
+{
+    
+    if (num_player==0) {
+        
+    int i,j;
+    cout << "                   ";
+    for (i=0; i<6; i++) cout << hands[0][i].num_carte << " " << hands[0][i].couleur << "      " ;
+    for (i=0; i<3; i++) cout << endl;
+
+    for (i=0; i<9; i++) if (bornes[i].possession == 1) cout << "   -BORNE-  " ;
+                        else cout << "            ";
+    for (i=0; i<3; i++) cout << endl;
+
+    for (i=2; i>=0; i--)
+    {
+        for (j=0; j<9; j++) cout << "   " << bornes[j].zone_Bornes[0].tableau_cartes[i].num_carte << " " << bornes[j].zone_Bornes[0].tableau_cartes[i].couleur << "   ";
+        cout << endl << endl;
+    }
+
+    for (i=0; i<2; i++) cout << endl;
+    for (i=0; i<9; i++) if (bornes[i].possession == 0) cout << "   -BORNE-  " ;
+                        else cout << "            ";
+    for (i=0; i<4; i++) cout << endl;
+
+    for (i=0; i<3; i++)
+    {
+        for (j=0; j<9; j++) cout << "   " << bornes[j].zone_Bornes[1].tableau_cartes[i].num_carte << " " << bornes[j].zone_Bornes[1].tableau_cartes[i].couleur << "   ";
+        cout << endl << endl;
+    }
+
+    for (i=0; i<2; i++) cout << endl;
+    for (i=0; i<9; i++) if (bornes[i].possession == 2) cout << "   -BORNE-  " ;
+                        else cout << "            ";
+    for (i=0; i<3; i++) cout << endl;
+
+    cout << "                   ";
+    for (i=0; i<6; i++) cout << "?" << " " << "????" << "      " ;
+    for (i=0; i<10; i++) cout << endl;
+        
+    }
+    
+    else {
+        
+        int i,j;
+        cout << "                   ";
+        for (i=0; i<6; i++) cout << "?" << " " << "????" << "      " ;
+        for (i=0; i<3; i++) cout << endl;
+        
+        for (i=0; i<9; i++) if (bornes[i].possession == 1) cout << "   -BORNE-  " ;
+        else cout << "            ";
+        for (i=0; i<3; i++) cout << endl;
+        
+        for (i=2; i>=0; i--)
+        {
+            for (j=0; j<9; j++) cout << "   " << bornes[j].zone_Bornes[0].tableau_cartes[i].num_carte << " " << bornes[j].zone_Bornes[0].tableau_cartes[i].couleur << "   ";
+            cout << endl << endl;
+        }
+        
+        for (i=0; i<2; i++) cout << endl;
+        for (i=0; i<9; i++) if (bornes[i].possession == 0) cout << "   -BORNE-  " ;
+        else cout << "            ";
+        for (i=0; i<4; i++) cout << endl;
+        
+        for (i=0; i<3; i++)
+        {
+            for (j=0; j<9; j++) cout << "   " << bornes[j].zone_Bornes[1].tableau_cartes[i].num_carte << " " << bornes[j].zone_Bornes[1].tableau_cartes[i].couleur << "   ";
+            cout << endl << endl;
+        }
+        
+        for (i=0; i<2; i++) cout << endl;
+        for (i=0; i<9; i++) if (bornes[i].possession == 2) cout << "   -BORNE-  " ;
+        else cout << "            ";
+        for (i=0; i<3; i++) cout << endl;
+        
+        cout << "                   ";
+        for (i=0; i<6; i++) cout << hands[1][i].num_carte << " " << hands[1][i].couleur << "      " ;
+        for (i=0; i<10; i++) cout << endl;
+        
+    }
+}
