@@ -5,7 +5,7 @@
 #include "Def.h"
 
 /* OPTIMISATION POSSIBLES :
-IA brelan : ne pas reconstruire le tableau des cartes inutiles à chaque fois --> compliqué.. dépend du joeur, et le caractère utile ou as varie en fonction de la main du joueur et du remplissage de la born...
+IA brelan : ne pas reconstruire le tableau des cartes inutiles à chaque fois --> compliqué.. dépend du joeur, et le caractère utile ou pas varie en fonction de la main du joueur et du remplissage de la born...
 Prendre en compte le fait de viser 3 bornes consécutives --> construire les brelands les plus probables sur 3 bornes consécutives. (commencons en mettant les3 premières cartes côte à côte).
 1 Tri pour tous les cas
 placer les brelans en fonction de ce que fait l'adversaire --> brelan probable sur combinaisons pouvant gagner (durdur...)
@@ -56,9 +56,8 @@ while (j_1_vict != 1){
     initialisation_pioche(pioche);
 
     cartes_piochees_debut = distribution_pioche_debut (pioche, hands, cartes_piochees_debut);
-    //cout << cartes_piochees_debut << endl << endl;
     initialisation_bornes (bornes);
-    //affichage (hands, bornes);
+
 
     while (fin_jeu == 0)
     {
@@ -110,9 +109,6 @@ while (j_1_vict != 1){
 
             num_player = (num_player+1)%2;
         }
-        //affichage (hands, bornes);
-
-        //cout << cartes_piochees_debut << endl << endl;
     }
     if (fin_jeu == 1) {/*cout << "Le Joueur 1 est victorieux !" << endl;*/ j_1_vict ++;}
     else {/*cout << "Le joueur 2 est victorieux !" << endl;*/ j_2_vict++;}
