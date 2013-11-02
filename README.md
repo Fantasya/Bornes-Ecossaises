@@ -1,14 +1,18 @@
-Bornes-Ecossaises
+Bornes Écossaises
 =================
 
-Travail en autonomie pour le cours d'algoritmie et programmation de première année à l'école centrale de Nantes.
+Description
+-----------
 
-Travail sur l'IA d'un jeu de carte.
+Les règles du jeux sont expliquées en détail ici : http://www.jeuxdenim.be/jeu-SchottenTotten.
 
-amélioration possibles :
+Ce programme permet de jouer aux bornes écossaises, à deux, ou tout seul contre une intelligence artificielle.
+
+Il a été réalisé en tant que travail en autonomie pour le cours d’*algorithmie et programmation* de première année à l'école centrale de Nantes.
+
+Amélioration possibles
+----------------------
   - IA brelan : ne pas reconstruire le tableau des cartes inutiles à chaque fois
   - Prendre en compte le fait de viser 3 bornes consécutives
   - 1 Tri pour tous les cas
   - placer les brelans en fonction de ce que fait l'adversaire
-  
-Je suis vraiement curieux de voir comment faire pour n'avoir qu'un seul tri.. j'ai essayer 40 min mais j'ai abandonné ^^
