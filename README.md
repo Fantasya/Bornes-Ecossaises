@@ -1,7 +1,7 @@
 Bornes-Ecossaises
 =================
 
-TA - Shotten Toten
+Travail en autonomie pour le cours d'algoritmie et programmation de première année à l'école centrale de Nantes.
 
 Travail sur l'IA d'un jeu de carte.
 
